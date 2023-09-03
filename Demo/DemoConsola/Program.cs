@@ -2,6 +2,7 @@
 /* Este es un comentario 
  en múltiples líneas */
 // Console.WriteLine("Hello, World!");
+using DemoConsola;
 
 // Variables
 var variable = "Cualquier valor";
@@ -81,4 +82,51 @@ for (int i = 0; i < separar.Length; i++)
 
 foreach (string s in lista) Console.WriteLine(s);
 
-//Console.WriteLine(evaluacion);
+// Métodos o funciones
+string saludar(string nombre)
+{
+    return $"Hola {nombre} desde una función";
+}
+
+//string saludo = saludar("SIS457");
+Console.WriteLine(saludar("SIS457"));
+
+// POO
+Persona persona = new Persona();
+persona.cedulaIdentidad = "123456-1O";
+persona.nombres = "Juan";
+persona.primerApellido = "Pérez";
+persona.segundoApellido = "Suárez";
+persona.fechaNacimiento = DateTime.Parse("1999-08-06");
+persona.celular = 76767676;
+persona.saludar();
+Console.WriteLine("Edad: " + persona.edad());
+
+Estudiante estudiante = new Estudiante();
+estudiante.cedulaIdentidad = "865245";
+estudiante.nombres = "Rubén";
+estudiante.primerApellido = "Arteaga";
+estudiante.segundoApellido = "Cierra";
+estudiante.fechaNacimiento = DateTime.Parse("1983-08-06");
+estudiante.celular = 74747474;
+estudiante.carnetUniversitario = "26-1234";
+estudiante.saludar();
+
+List<Persona> personas = new List<Persona>();
+//Persona[] people = new Persona[3];
+for (int i = 0; i < 3; i++) // i < people.lenght
+{
+    var person = new Persona();
+    Console.WriteLine($"Introduzca CI de la persona {(i+1)}:");
+    person.cedulaIdentidad = Console.ReadLine().Trim();
+
+    Console.WriteLine($"Introduzca el nombre de la persona {(i + 1)}:");
+    person.nombres = Console.ReadLine().Trim();
+
+    Console.WriteLine($"Introduzca el primer apellido de la persona {(i + 1)}:");
+    person.primerApellido = Console.ReadLine().Trim();
+    personas.Add(person);
+    //people[i] = person;
+}
+
+foreach (var person in personas) person.saludar();
