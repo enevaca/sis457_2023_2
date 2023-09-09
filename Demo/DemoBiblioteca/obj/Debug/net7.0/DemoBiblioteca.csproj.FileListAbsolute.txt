@@ -1,0 +1,11 @@
+D:\usfx\SIS457\sis457_2023_2\Demo\DemoBiblioteca\bin\Debug\net7.0\DemoBiblioteca.deps.json
+D:\usfx\SIS457\sis457_2023_2\Demo\DemoBiblioteca\bin\Debug\net7.0\DemoBiblioteca.dll
+D:\usfx\SIS457\sis457_2023_2\Demo\DemoBiblioteca\bin\Debug\net7.0\DemoBiblioteca.pdb
+D:\usfx\SIS457\sis457_2023_2\Demo\DemoBiblioteca\obj\Debug\net7.0\DemoBiblioteca.GeneratedMSBuildEditorConfig.editorconfig
+D:\usfx\SIS457\sis457_2023_2\Demo\DemoBiblioteca\obj\Debug\net7.0\DemoBiblioteca.AssemblyInfoInputs.cache
+D:\usfx\SIS457\sis457_2023_2\Demo\DemoBiblioteca\obj\Debug\net7.0\DemoBiblioteca.AssemblyInfo.cs
+D:\usfx\SIS457\sis457_2023_2\Demo\DemoBiblioteca\obj\Debug\net7.0\DemoBiblioteca.csproj.CoreCompileInputs.cache
+D:\usfx\SIS457\sis457_2023_2\Demo\DemoBiblioteca\obj\Debug\net7.0\DemoBiblioteca.dll
+D:\usfx\SIS457\sis457_2023_2\Demo\DemoBiblioteca\obj\Debug\net7.0\refint\DemoBiblioteca.dll
+D:\usfx\SIS457\sis457_2023_2\Demo\DemoBiblioteca\obj\Debug\net7.0\DemoBiblioteca.pdb
+D:\usfx\SIS457\sis457_2023_2\Demo\DemoBiblioteca\obj\Debug\net7.0\ref\DemoBiblioteca.dll

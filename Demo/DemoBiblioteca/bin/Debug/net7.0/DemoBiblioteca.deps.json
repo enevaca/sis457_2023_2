@@ -6,14 +6,6 @@
   "compilationOptions": {},
   "targets": {
     ".NETCoreApp,Version=v7.0": {
-      "DemoConsolaAvanzado/1.0.0": {
-        "dependencies": {
-          "DemoBiblioteca": "1.0.0"
-        },
-        "runtime": {
-          "DemoConsolaAvanzado.dll": {}
-        }
-      },
       "DemoBiblioteca/1.0.0": {
         "runtime": {
           "DemoBiblioteca.dll": {}
@@ -22,11 +14,6 @@
     }
   },
   "libraries": {
-    "DemoConsolaAvanzado/1.0.0": {
-      "type": "project",
-      "serviceable": false,
-      "sha512": ""
-    },
     "DemoBiblioteca/1.0.0": {
       "type": "project",
       "serviceable": false,
