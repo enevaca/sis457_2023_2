@@ -1,0 +1,47 @@
+﻿CREATE DATABASE Minerva;
+
+USE master
+GO
+CREATE LOGIN usrminerva WITH PASSWORD=N'123456',
+	DEFAULT_DATABASE=Minerva,
+	CHECK_EXPIRATION=OFF,
+	CHECK_POLICY=ON
+GO
+USE Minerva
+GO
+CREATE USER usrminerva FOR LOGIN usrminerva
+GO
+ALTER ROLE db_owner ADD MEMBER usrminerva
+GO
+
+DROP TABLE Empleado;
+DROP TABLE Proveedor;
+DROP TABLE Producto;
+
+CREATE TABLE Producto (
+  id INT NOT NULL PRIMARY KEY IDENTITY(1,1),
+  codigo VARCHAR(10) NOT NULL,
+  descripcion VARCHAR(250) NOT NULL,
+  unidadMedida VARCHAR(20) NOT NULL,
+  saldo DECIMAL NOT NULL DEFAULT 0,
+  precioVenta DECIMAL NOT NULL CHECK(precioVenta > 0)
+);
+CREATE TABLE Proveedor (
+  id INT NOT NULL PRIMARY KEY IDENTITY(1,1),
+  nit BIGINT NOT NULL,
+  razonSocial VARCHAR(100) NOT NULL,
+  direccion VARCHAR(250) NULL,
+  telefono VARCHAR(30) NOT NULL,
+  representante VARCHAR(100) NOT NULL
+);
+CREATE TABLE Empleado (
+  id INT NOT NULL PRIMARY KEY IDENTITY(1,1),
+  cedulaIdentidad VARCHAR(15) NOT NULL,
+  nombres VARCHAR(20) NOT NULL,
+  primerApellido VARCHAR(20) NULL,
+  segudoApellido VARCHAR(20) NULL,
+  direccion VARCHAR(250) NOT NULL,
+  celular BIGINT NOT NULL,
+  cargo VARCHAR(30) NOT NULL
+);
+
