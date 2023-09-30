@@ -1,4 +1,5 @@
-﻿using System;
+﻿using ClnMinerva;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -15,6 +16,7 @@ namespace CpMinerva
         public FrmPrincipal()
         {
             InitializeComponent();
+            dgvLista.DataSource = ProductoCln.listarPa("");
         }
     }
 }

@@ -73,27 +73,27 @@ CREATE TABLE CompraDetalle (
   CONSTRAINT fk_CompraDetalle_Producto FOREIGN KEY(idProducto) REFERENCES Producto(id)
 );
 
-ALTER TABLE Producto ADD usuarioRegistro VARCHAR(20) NOT NULL DEFAULT SUSER_NAME();
+ALTER TABLE Producto ADD usuarioRegistro VARCHAR(50) NOT NULL DEFAULT SUSER_NAME();
 ALTER TABLE Producto ADD fechaRegistro DATETIME NOT NULL DEFAULT GETDATE();
 ALTER TABLE Producto ADD estado SMALLINT NOT NULL DEFAULT 1; -- -1: Eliminación lógica, 0: Inactivo, 1: Activo
 
-ALTER TABLE Proveedor ADD usuarioRegistro VARCHAR(20) NOT NULL DEFAULT SUSER_NAME();
+ALTER TABLE Proveedor ADD usuarioRegistro VARCHAR(50) NOT NULL DEFAULT SUSER_NAME();
 ALTER TABLE	Proveedor ADD fechaRegistro DATETIME NOT NULL DEFAULT GETDATE();
 ALTER TABLE Proveedor ADD estado SMALLINT NOT NULL DEFAULT 1; -- -1: Eliminación lógica, 0: Inactivo, 1: Activo
 
-ALTER TABLE Empleado ADD usuarioRegistro VARCHAR(20) NOT NULL DEFAULT SUSER_NAME();
+ALTER TABLE Empleado ADD usuarioRegistro VARCHAR(50) NOT NULL DEFAULT SUSER_NAME();
 ALTER TABLE Empleado ADD fechaRegistro DATETIME NOT NULL DEFAULT GETDATE();
 ALTER TABLE Empleado ADD estado SMALLINT NOT NULL DEFAULT 1; -- -1: Eliminación lógica, 0: Inactivo, 1: Activo
 
-ALTER TABLE Usuario ADD usuarioRegistro VARCHAR(20) NOT NULL DEFAULT SUSER_NAME();
+ALTER TABLE Usuario ADD usuarioRegistro VARCHAR(50) NOT NULL DEFAULT SUSER_NAME();
 ALTER TABLE Usuario ADD fechaRegistro DATETIME NOT NULL DEFAULT GETDATE();
 ALTER TABLE Usuario ADD estado SMALLINT NOT NULL DEFAULT 1; -- -1: Eliminación lógica, 0: Inactivo, 1: Activo
 
-ALTER TABLE Compra ADD usuarioRegistro VARCHAR(20) NOT NULL DEFAULT SUSER_NAME();
+ALTER TABLE Compra ADD usuarioRegistro VARCHAR(50) NOT NULL DEFAULT SUSER_NAME();
 ALTER TABLE Compra ADD fechaRegistro DATETIME NOT NULL DEFAULT GETDATE();
 ALTER TABLE Compra ADD estado SMALLINT NOT NULL DEFAULT 1; -- -1: Eliminación lógica, 0: Inactivo, 1: Activo
 
-ALTER TABLE CompraDetalle ADD usuarioRegistro VARCHAR(20) NOT NULL DEFAULT SUSER_NAME();
+ALTER TABLE CompraDetalle ADD usuarioRegistro VARCHAR(50) NOT NULL DEFAULT SUSER_NAME();
 ALTER TABLE CompraDetalle ADD fechaRegistro DATETIME NOT NULL DEFAULT GETDATE();
 ALTER TABLE CompraDetalle ADD estado SMALLINT NOT NULL DEFAULT 1; -- -1: Eliminación lógica, 0: Inactivo, 1: Activo
 
