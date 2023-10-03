@@ -7,7 +7,6 @@ D:\usfx\SIS457\sis457_2023_2\Minerva\CpMinerva\obj\Debug\CpMinerva.csproj.Genera
 D:\usfx\SIS457\sis457_2023_2\Minerva\CpMinerva\obj\Debug\CpMinerva.csproj.CoreCompileInputs.cache
 D:\usfx\SIS457\sis457_2023_2\Minerva\CpMinerva\obj\Debug\CpMinerva.exe
 D:\usfx\SIS457\sis457_2023_2\Minerva\CpMinerva\obj\Debug\CpMinerva.pdb
-D:\usfx\SIS457\sis457_2023_2\Minerva\CpMinerva\obj\Debug\CpMinerva.FrmPrincipal.resources
 D:\usfx\SIS457\sis457_2023_2\Minerva\CpMinerva\bin\Debug\CadMinerva.dll
 D:\usfx\SIS457\sis457_2023_2\Minerva\CpMinerva\bin\Debug\ClnMinerva.dll
 D:\usfx\SIS457\sis457_2023_2\Minerva\CpMinerva\bin\Debug\EntityFramework.dll
@@ -19,3 +18,4 @@ D:\usfx\SIS457\sis457_2023_2\Minerva\CpMinerva\bin\Debug\EntityFramework.xml
 D:\usfx\SIS457\sis457_2023_2\Minerva\CpMinerva\obj\Debug\CpMinerva.csproj.CopyComplete
 D:\usfx\SIS457\sis457_2023_2\Minerva\CpMinerva\bin\Debug\EntityFramework.SqlServer.dll
 D:\usfx\SIS457\sis457_2023_2\Minerva\CpMinerva\bin\Debug\EntityFramework.SqlServer.xml
+D:\usfx\SIS457\sis457_2023_2\Minerva\CpMinerva\obj\Debug\CpMinerva.FrmProducto.resources
