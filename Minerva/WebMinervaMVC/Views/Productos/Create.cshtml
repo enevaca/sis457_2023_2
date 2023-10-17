@@ -24,7 +24,12 @@
             </div>
             <div class="form-group">
                 <label class="control-label">Unidad de Medida</label>
-                <input asp-for="UnidadMedida" class="form-control" />
+                <select asp-for="UnidadMedida" class="form-select">
+                    <option>Caja</option>
+                    <option>Docena</option>
+                    <option>Pliego</option>
+                    <option>Unidad</option>
+                </select>
                 <span asp-validation-for="UnidadMedida" class="text-danger"></span>
             </div>
             <div class="form-group">
