@@ -5,46 +5,52 @@
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
-<h1>Detalle de Producto</h1>
+<div class="container-fluid my-3">
+    <div class="container">
+        <div class="row">
+            <h1>Detalle de Producto</h1>
 
-<div>
-    <hr />
-    <dl class="row">
-        <dt class = "col-sm-2">Código</dt>
-        <dd class = "col-sm-10">
-            @Html.DisplayFor(model => model.Codigo)
-        </dd>
-        <dt class = "col-sm-2">Descripción</dt>
-        <dd class = "col-sm-10">
-            @Html.DisplayFor(model => model.Descripcion)
-        </dd>
-        <dt class = "col-sm-2">Unidad de Medida</dt>
-        <dd class = "col-sm-10">
-            @Html.DisplayFor(model => model.UnidadMedida)
-        </dd>
-        <dt class = "col-sm-2">Saldo</dt>
-        <dd class = "col-sm-10">
-            @Html.DisplayFor(model => model.Saldo)
-        </dd>
-        <dt class = "col-sm-2">Precio de Venta</dt>
-        <dd class = "col-sm-10">
-            @Html.DisplayFor(model => model.PrecioVenta)
-        </dd>
-        <dt class = "col-sm-2">Usuario Registro</dt>
-        <dd class = "col-sm-10">
-            @Model.UsuarioRegistro
-        </dd>
-        <dt class = "col-sm-2">Fecha Registro</dt>
-        <dd class = "col-sm-10">
-            @Model.FechaRegistro.ToLongDateString() @Model.FechaRegistro.ToShortTimeString()
-        </dd>
-        <dt class = "col-sm-2">Estado</dt>
-        <dd class = "col-sm-10">
-            @Html.DisplayFor(model => model.Estado)
-        </dd>
-    </dl>
-</div>
-<div>
-    <a asp-action="Edit" asp-route-id="@Model?.Id">Editar</a> |
-    <a asp-action="Index">Volver a la lista</a>
+            <div>
+                <hr />
+                <dl class="row">
+                    <dt class="col-sm-2">Código</dt>
+                    <dd class="col-sm-10">
+                        @Html.DisplayFor(model => model.Codigo)
+                    </dd>
+                    <dt class="col-sm-2">Descripción</dt>
+                    <dd class="col-sm-10">
+                        @Html.DisplayFor(model => model.Descripcion)
+                    </dd>
+                    <dt class="col-sm-2">Unidad de Medida</dt>
+                    <dd class="col-sm-10">
+                        @Html.DisplayFor(model => model.UnidadMedida)
+                    </dd>
+                    <dt class="col-sm-2">Saldo</dt>
+                    <dd class="col-sm-10">
+                        @Html.DisplayFor(model => model.Saldo)
+                    </dd>
+                    <dt class="col-sm-2">Precio de Venta</dt>
+                    <dd class="col-sm-10">
+                        @Html.DisplayFor(model => model.PrecioVenta)
+                    </dd>
+                    <dt class="col-sm-2">Usuario Registro</dt>
+                    <dd class="col-sm-10">
+                        @Model.UsuarioRegistro
+                    </dd>
+                    <dt class="col-sm-2">Fecha Registro</dt>
+                    <dd class="col-sm-10">
+                        @Model.FechaRegistro.ToLongDateString() @Model.FechaRegistro.ToShortTimeString()
+                    </dd>
+                    <dt class="col-sm-2">Estado</dt>
+                    <dd class="col-sm-10">
+                        @Html.DisplayFor(model => model.Estado)
+                    </dd>
+                </dl>
+            </div>
+            <div>
+                <a asp-action="Edit" asp-route-id="@Model?.Id">Editar</a> |
+                <a asp-action="Index">Volver a la lista</a>
+            </div>
+        </div>
+    </div>
 </div>

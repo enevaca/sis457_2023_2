@@ -9,7 +9,9 @@
     <div class="container">
         <div class="row">
             <h1>Productos</h1>
-            <a asp-action="Create">Crear Nuevo</a>
+            <a asp-action="Create">
+                <i class="fas fa-plus me-2"></i>Crear Nuevo
+            </a>
             <table class="table">
                 <thead>
                     <tr>
@@ -53,9 +55,9 @@
                                 @(item.Estado == 1 ? "Activo" : "Inactivo")
                             </td>
                             <td>
-                                <a asp-action="Edit" asp-route-id="@item.Id">Editar</a> |
-                                <a asp-action="Details" asp-route-id="@item.Id">Detalle</a> |
-                                <a asp-action="Delete" asp-route-id="@item.Id">Eliminar</a>
+                                <a asp-action="Details" asp-route-id="@item.Id" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Ver"><i class="fas fa-eye me-2"></i></a>
+                                <a asp-action="Edit" asp-route-id="@item.Id" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Editar"><i class="fas fa-edit me-2"></i></a>
+                                <a asp-action="Delete" asp-route-id="@item.Id" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Eliminar"><i class="fas fa-trash me-2"></i></a>
                             </td>
                         </tr>
                     }
