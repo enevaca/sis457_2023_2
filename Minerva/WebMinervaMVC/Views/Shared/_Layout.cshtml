@@ -62,18 +62,21 @@
                 <div class="collapse navbar-collapse bg-transparent" id="navbarCollapse">
                     <div class="navbar-nav ms-auto mx-xl-auto p-0">
                         <a asp-controller="Home" asp-action="Index" class="nav-item nav-link active text-secondary">Inicio</a>
-                        <a asp-controller="Productos" asp-action="Index" class="nav-item nav-link">Productos</a>
-                        <a asp-controller="Proveedores" asp-action="Index" class="nav-item nav-link">Proveedores</a>
-                        <a asp-controller="Home" asp-action="Privacy" class="nav-item nav-link">Privacidad</a>
-                        <div class="nav-item dropdown">
-                            <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Admin</a>
-                            <div class="dropdown-menu rounded">
-                                <a asp-controller="Empleados" asp-action="Index" class="dropdown-item">Empleados</a>
-                                <a asp-controller="Usuarios" asp-action="Index" class="dropdown-item">Usuarios</a>
-                                <a href="testimonial.html" class="dropdown-item">Testimonial</a>
-                                <a href="404.html" class="dropdown-item">404 Page</a>
+                        @if (User.Identity?.IsAuthenticated == true)
+                        {
+                            <a asp-controller="Productos" asp-action="Index" class="nav-item nav-link">Productos</a>
+                            <a asp-controller="Proveedores" asp-action="Index" class="nav-item nav-link">Proveedores</a>
+                            <div class="nav-item dropdown">
+                                <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Admin</a>
+                                <div class="dropdown-menu rounded">
+                                    <a asp-controller="Empleados" asp-action="Index" class="dropdown-item">Empleados</a>
+                                    <a asp-controller="Usuarios" asp-action="Index" class="dropdown-item">Usuarios</a>
+                                    <a href="testimonial.html" class="dropdown-item">Testimonial</a>
+                                    <a href="404.html" class="dropdown-item">404 Page</a>
+                                </div>
                             </div>
-                        </div>
+                        }
+                        <a asp-controller="Home" asp-action="Privacy" class="nav-item nav-link">Privacidad</a>
                         <a href="contact.html" class="nav-item nav-link">Contact</a>
                     </div>
                 </div>
@@ -91,7 +94,14 @@
                         <span class="text-secondary">Call: + 0123 456 7890</span>
                     </div>
                     <div class="d-flex align-items-center justify-content-center ms-4 ">
-                        <a href="#" style="color: wheat">Iniciar Sesión</a>
+                        @if (User.Identity?.IsAuthenticated == false)
+                        {
+                            <a asp-controller="Account" asp-action="Login" style="color: wheat">Iniciar Sesión</a>
+                        }
+                        else
+                        {
+                            @await Html.PartialAsync("_LogoutPartial")
+                        }
                     </div>
                 </div>
             </nav>
