@@ -138,7 +138,7 @@ namespace CpMinerva
                 producto.unidadMedida = cbxUnidadMedida.Text;
                 producto.saldo = nudSaldo.Value;
                 producto.precioVenta = nudPrecioVenta.Value;
-                producto.usuarioRegistro = "SIS257";
+                producto.usuarioRegistro = Util.usuario.usuario1;
 
                 if (esNuevo)
                 {

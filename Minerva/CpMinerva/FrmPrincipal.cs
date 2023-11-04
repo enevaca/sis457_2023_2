@@ -12,14 +12,21 @@ namespace CpMinerva
 {
     public partial class FrmPrincipal : Form
     {
-        public FrmPrincipal()
+        FrmAutenticacion frmAutenticacion;
+        public FrmPrincipal(FrmAutenticacion frmAutenticacion)
         {
             InitializeComponent();
+            this.frmAutenticacion = frmAutenticacion;
         }
 
         private void btnCaProductos_Click(object sender, EventArgs e)
         {
             new FrmProducto().ShowDialog();
+        }
+
+        private void FrmPrincipal_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            frmAutenticacion.Visible = true;
         }
     }
 }
