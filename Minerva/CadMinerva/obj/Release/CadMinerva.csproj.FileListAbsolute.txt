@@ -1,0 +1,12 @@
+D:\usfx\SIS457\sis457_2023_2\Minerva\CadMinerva\bin\Release\CadMinerva.dll.config
+D:\usfx\SIS457\sis457_2023_2\Minerva\CadMinerva\bin\Release\CadMinerva.dll
+D:\usfx\SIS457\sis457_2023_2\Minerva\CadMinerva\bin\Release\CadMinerva.pdb
+D:\usfx\SIS457\sis457_2023_2\Minerva\CadMinerva\bin\Release\EntityFramework.dll
+D:\usfx\SIS457\sis457_2023_2\Minerva\CadMinerva\bin\Release\EntityFramework.SqlServer.dll
+D:\usfx\SIS457\sis457_2023_2\Minerva\CadMinerva\bin\Release\EntityFramework.xml
+D:\usfx\SIS457\sis457_2023_2\Minerva\CadMinerva\bin\Release\EntityFramework.SqlServer.xml
+D:\usfx\SIS457\sis457_2023_2\Minerva\CadMinerva\obj\Release\CadMinerva.csproj.AssemblyReference.cache
+D:\usfx\SIS457\sis457_2023_2\Minerva\CadMinerva\obj\Release\CadMinerva.csproj.CoreCompileInputs.cache
+D:\usfx\SIS457\sis457_2023_2\Minerva\CadMinerva\obj\Release\CadMinerva.csproj.CopyComplete
+D:\usfx\SIS457\sis457_2023_2\Minerva\CadMinerva\obj\Release\CadMinerva.dll
+D:\usfx\SIS457\sis457_2023_2\Minerva\CadMinerva\obj\Release\CadMinerva.pdb

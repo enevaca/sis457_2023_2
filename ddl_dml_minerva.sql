@@ -1,5 +1,5 @@
 ﻿-- DDL
-CREATE DATABASE Minerva;
+--CREATE DATABASE Minerva;
 
 USE master
 GO
@@ -97,7 +97,7 @@ ALTER TABLE CompraDetalle ADD usuarioRegistro VARCHAR(50) NOT NULL DEFAULT SUSER
 ALTER TABLE CompraDetalle ADD fechaRegistro DATETIME NOT NULL DEFAULT GETDATE();
 ALTER TABLE CompraDetalle ADD estado SMALLINT NOT NULL DEFAULT 1; -- -1: Eliminación lógica, 0: Inactivo, 1: Activo
 
-ALTER PROC paProductoListar @parametro VARCHAR(50)
+CREATE PROC paProductoListar @parametro VARCHAR(50)
 AS
   SELECT id,codigo,descripcion,unidadMedida,saldo,precioVenta,usuarioRegistro,fechaRegistro,estado 
   FROM Producto
@@ -116,5 +116,16 @@ UPDATE Producto SET codigo='BG001',precioVenta=7 WHERE id=2;
 UPDATE Producto SET estado=-1 WHERE id=2; -- Eliminación lógica
 UPDATE Producto SET estado=0 WHERE id=2;  -- Establecer registro como inactivo
 -- DELETE FROM Producto WHERE id=2;
+
+SET IDENTITY_INSERT [dbo].[Empleado] ON
+INSERT INTO [dbo].[Empleado] ([id], [cedulaIdentidad], [nombres], [primerApellido], [segudoApellido], [direccion], [celular], [cargo], [usuarioRegistro], [fechaRegistro], [estado]) VALUES (1, N'123456', N'Juan', N'Perez', N'Lopez', N'Calle Loa N° 5', 76767676, N'Administrador', N'sis457', N'2023-10-21 10:23:17', 1)
+INSERT INTO [dbo].[Empleado] ([id], [cedulaIdentidad], [nombres], [primerApellido], [segudoApellido], [direccion], [celular], [cargo], [usuarioRegistro], [fechaRegistro], [estado]) VALUES (2, N'987654', N'Maria', N'Suárez', N'Bae', N'Av. Jaime Mendoza S/N', 76767678, N'Cajero', N'sis457', N'2023-10-21 10:24:52', 1)
+SET IDENTITY_INSERT [dbo].[Empleado] OFF
+
+SET IDENTITY_INSERT [dbo].[Usuario] ON
+INSERT INTO [dbo].[Usuario] ([id], [idEmpleado], [usuario], [clave], [usuarioRegistro], [fechaRegistro], [estado]) VALUES (1, 1, N'jperez', N'sNHlIWhFGGMvPk5ii1nVUw==', N'sis457', N'2023-10-21 10:29:49', 1)
+INSERT INTO [dbo].[Usuario] ([id], [idEmpleado], [usuario], [clave], [usuarioRegistro], [fechaRegistro], [estado]) VALUES (2, 2, N'maria', N'sNHlIWhFGGMvPk5ii1nVUw==', N'sis457', N'2023-10-23 20:36:56', 1)
+SET IDENTITY_INSERT [dbo].[Usuario] OFF
+
 
 SELECT * FROM Producto WHERE estado=1;
